@@ -69,7 +69,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ChatMessage(
           text: text,
           time: DateTime.now(),
-          author: const ChatAuthor(id: 'User', name: 'Anu'),
+          author: const ChatAuthor(id: 'User', name: 'Anitha'),
         ),
       );
     });
