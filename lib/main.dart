@@ -5,19 +5,19 @@ void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
-      body: ChatScreen(),
+      body: ChatWidget(),
     ),
   ));
 }
 
-class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+class ChatWidget extends StatefulWidget {
+  const ChatWidget({super.key});
 
   @override
-  State<ChatScreen> createState() => _ChatScreenState();
+  State<ChatWidget> createState() => _ChatWidgetState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _ChatWidgetState extends State<ChatWidget> {
   final List<ChatMessage> _messages = <ChatMessage>[];
 
   @override
@@ -26,7 +26,7 @@ class _ChatScreenState extends State<ChatScreen> {
       padding: const EdgeInsets.all(10),
       child: SfChat(
         messages: _messages,
-        outgoingUser: 'User',
+        outgoingUser: '123-001',
         composer: const ChatComposer(),
         placeholderBuilder: (BuildContext context) => _buildPlaceholder(),
         actionButton: ChatActionButton(
@@ -69,7 +69,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ChatMessage(
           text: text,
           time: DateTime.now(),
-          author: const ChatAuthor(id: 'User', name: 'Anitha'),
+          author: const ChatAuthor(id: '123-001', name: 'John Doe'),
         ),
       );
     });
